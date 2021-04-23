@@ -1,7 +1,3 @@
-package main
-
-import "fmt"
-
 func reverse(numbers []int) []int {
 	for i := 0; i < len(numbers)/2; i++ {
 		j := len(numbers) - i - 1
