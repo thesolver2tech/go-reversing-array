@@ -2,14 +2,15 @@ package main
 
 import "fmt"
 
-func main() {
-	str := "ABCDEFG"
-	result := SortString(str)
-	fmt.Println("Result =", result)
+func reverse(numbers []int) []int {
+	for i := 0; i < len(numbers)/2; i++ {
+		j := len(numbers) - i - 1
+		numbers[i], numbers[j] = numbers[j], numbers[i]
+	}
+	return numbers
 }
 
-func SortString(s string) string {
-	result := ""
-	//TODO : Write your code here
-	return result
+func main() {
+	fmt.Printf("%v\n", reverse([]int{1, 2, 3, 4, 5}))
+	fmt.Printf("%v\n", reverse([]int{1, 2, 3, 4}))
 }
